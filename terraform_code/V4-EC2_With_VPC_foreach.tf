@@ -7,7 +7,7 @@ provider "aws" {
 resource "aws_instance" "demo-server" {
   ami = "ami-0261755bbcb8c4a84"
   instance_type = "t2.micro"
-  key_name = "terraform-ssh-key"
+  key_name = "dpp"
   
   for_each = toset(["Jenkins-master", "build-slave", "ansible"])
    tags = {
